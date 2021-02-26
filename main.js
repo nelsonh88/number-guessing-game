@@ -136,7 +136,3 @@ const keyHandler = function (event) {
 };
 
 document.addEventListener('keydown', keyHandler, false);
-
-// const marioKartDrive = function () {
-
-// };
