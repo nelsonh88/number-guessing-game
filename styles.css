@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+    color: #eee;
+    background-color: #222;
+}
+
+body {
+    font-family: 'Press Start 2P';
+    margin: 40px 20px;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+div.konami img {
+    visibility: hidden;
+    width: 30px;
+    position: relative;
+}
+
+
+section.secret-number-display {
+    display: grid;
+    grid-template-columns: auto 100px auto;
+    grid-template-rows: auto 5px auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+div.divder {
+    border-bottom: 5px solid #eee;
+    grid-area: 2 / 1 / 3 / 4;
+
+}
+
+div.secret-number {
+    background-color: #eee;
+    grid-area: 1 / 2 / 4 / 3;
+
+}
+
+div.secret-number p {
+    font-size: 2rem;
+    color: #222;
+    text-align: center;
+}
+
+section.scoring-section {
+    margin: 40px 0 0 0;
+}
+
+section.guessing-section {
+    margin: 40px 0;
+}
+
+p.label-score {}
+
+p.label-highscore {}
+
+p.message {
+    margin-bottom: 40px;
+}
+
+input.guess {
+    width: 150px;
+    padding: 20px;
+    margin: 0 auto;
+    display: block;
+    font-size: 2rem;
+    font-family: 'Press Start 2P';
+    background-color: #222;
+    border: 4px solid #eee;
+    color: #eee;
+}
+
+button {
+    border: none;
+    background-color: #eee;
+    color: #222;
+    font-size: 1rem;
+    font-family: inherit;
+    padding: 20px 30px;
+    cursor: pointer;
+}
+
+button.check {
+    display: block;
+    margin: 40px auto;
+}
+
+button.again {
+    border: none;
+    background-color: transparent;
+    color: #eee;
+    font-size: 1rem;
+    font-family: inherit;
+    padding: 0;
+    cursor: pointer;
+    line-height: 1.5;
+    text-decoration: underline solid #eee 5px;
+}
+
+button.again:hover {
+    opacity: 75%;
+}
+
+footer p {
+    font-size: 0.8em;
+    margin: 60px auto 40px auto;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #827e7e;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        margin: 40px auto;
+        max-width: 700px;
+    }
+}

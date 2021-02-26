@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess my number</title>
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Guess my number!</h1>
+        <h2>Between 1 & 20</h2>
+    </header>
+    <main>
+
+        <section class="secret-number-display">
+            <div class="konami">
+                <img src="./images/mario-kart.png" alt="">
+            </div>
+            <div class="divder"></div>
+            <div class="secret-number">
+                <p class="number">?</p>
+            </div>
+        </section>
+
+        <section class="scoring-section">
+            <p class="label-score">💯 Score: <span class="score">5</span></p>
+            <p class="label-highscore">
+                🥇 Highscore: <span class="highscore">0</span>
+            </p>
+        </section>
+        <section class="guessing-section">
+
+
+            <p class="message">Start guessing...</p>
+            <input type="number" class="guess" />
+            <button class="check">Check!</button>
+
+        </section>
+
+        <section class="game-options">
+            <button class="again">New game</button>
+            <!-- <button class="new-game">New game</button> -->
+        </section>
+    </main>
+
+    <footer>
+        <p>© Copyright 2021 Nelson Huezo</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
