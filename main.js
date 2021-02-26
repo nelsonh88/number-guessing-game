@@ -5,7 +5,7 @@
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
 // how many guesses you are allowed before you lose
-let score = 5;
+let score = 10;
 
 let highScore = 0;
 
@@ -25,13 +25,13 @@ const resetGuessField = function (newValue) {
     document.querySelector('.guess').value = newValue;
 };
 
-console.log(secretNumber);
+// console.log(secretNumber);
 
 document.querySelector('.check').addEventListener('click', function () {
     // Number method makes the string into a number
     const guess = Number(document.querySelector('.guess').value);
 
-    console.log(typeof guess);
+    // console.log(typeof guess);
     // if no input
     if (!guess) {
         displayMessage('No number')
@@ -69,9 +69,9 @@ document.querySelector('.check').addEventListener('click', function () {
 document.querySelector('.again').addEventListener('click', function () {
     let newSecretNumber = Math.trunc(Math.random() * 20) + 1;
     secretNumber = newSecretNumber;
-    console.log('new number', secretNumber);
+    // console.log('new number', secretNumber);
     numberDisplay('?');
-    score = 5;
+    score = 10;
     updateScore(score);
     displayMessage('Start guessing...');
     resetGuessField('');
@@ -90,7 +90,7 @@ let current = 0;
 
 
 const keyHandler = function (event) {
-    console.log(event.key)
+    // console.log(event.key)
 
     // If the key isn't in the pattern, reset
     // If the key isn't in the pattern, or isn't the current key in the pattern, reset
@@ -113,7 +113,7 @@ const keyHandler = function (event) {
         document.querySelector('.konami img').style.animationDuration = '6s'
         // had to insertrule for the keyframes
         const css = window.document.styleSheets[1];
-        console.log(css)
+        // console.log(css)
         css.insertRule(`
 @keyframes marioKart {
   0%   { left: 0;     }
