@@ -134,5 +134,5 @@ const keyHandler = function (event) {
     }
 
 };
-
+// adding the eventlistener with th callback fn keyhandler
 document.addEventListener('keydown', keyHandler, false);
