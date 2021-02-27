@@ -9,6 +9,14 @@ let score = 10;
 
 let highScore = 0;
 
+// the pattern for the konami code
+const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+
+// current variable to keep track oh how many keys in the konamiCode have been pressed succesfully
+let current = 0;
+
+const easterEgg = document.querySelector('.konami img');
+
 const displayMessage = function (message) {
     document.querySelector('.message').textContent = message;
 };
@@ -82,35 +90,23 @@ document.querySelector('.again').addEventListener('click', function () {
 
 // below will be the konami code
 
-// the pattern if the konami code
-const pattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-
-// current variable to keep track oh how many keys in the pattern have been pressed succesfully
-let current = 0;
-
-
 const keyHandler = function (event) {
     // console.log(event.key)
 
-    // If the key isn't in the pattern, reset
-    // If the key isn't in the pattern, or isn't the current key in the pattern, reset
-    if (pattern.indexOf(event.key) < 0 || event.key !== pattern[current]) {
+    // If the key isn't in the konamiCode, reset
+    // If the key isn't in the konamiCode, or isn't the current key in the konamiCode, reset
+    if (konamiCode.indexOf(event.key) < 0 || event.key !== konamiCode[current]) {
         current = 0;
         return;
     }
 
-    // Update how much of the pattern is complete
+    // Update how much of the konamiCode is complete
     current++;
 
     // If complete, alert and reset
-    if (pattern.length === current) {
+    if (konamiCode.length === current) {
         current = 0;
-
-        document.querySelector('.konami img').style.visibility = 'visible'
-
-        document.querySelector('.konami img').style.animationName = 'marioKart'
-
-        document.querySelector('.konami img').style.animationDuration = '6s'
+        easterEgg.classList.add('showEasterEgg')
         // had to insertrule for the keyframes
         const css = window.document.styleSheets[1];
         // console.log(css)
@@ -121,15 +117,8 @@ const keyHandler = function (event) {
   100% { left: 0; }
 }`);
 
-        // window.alert('You found it!');
-
         setTimeout(function () {
-            document.querySelector('.konami img').style.visibility = 'hidden';
-
-            document.querySelector('.konami img').style.animationName = 'none'
-
-            document.querySelector('.konami img').style.animationDuration = ''
-
+            easterEgg.classList.remove('showEasterEgg');
         }, 6000);
     }
 
